@@ -1,22 +1,11 @@
 {
-  "name": "my-node-app",
+  "name": "nodejs-ci",
   "version": "1.0.0",
-  "description": "A baseline Node.js application boilerplate",
-  "main": "index.js",
+  "description": "Starter Node.js app for the GitHub Actions CI lab",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
-  },
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "private": true
+    "test": "node --test test/index.test.js",
+    "build": "node scripts/build.js"
+  }
 }
